@@ -391,3 +391,9 @@ section.end {
     margin-bottom: 5rem;
   }
 }
+
+footer {
+  color: black;
+  text-align: center;
+  padding: 3rem 0;
+}
