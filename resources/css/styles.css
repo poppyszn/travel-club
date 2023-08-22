@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Inter&display=swap');
+
+html {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: #000000;
+}
+
+/* header styles */
+header .container{
+  position: fixed;
+  display: flex;
+  align-items: center;
+  padding: 1.875rem 1.25rem;
+  margin: 1.875rem 3.125rem;
+  box-sizing: border-box;
+  border-radius: 0.9375rem;
+  background: white;
+  z-index: 1;
+  justify-content: space-between;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+
+header img {
+  width: 11.375rem;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li{
+  margin: 0 0.625rem;
+}
+
+nav.mobile ul.dp-button li a i {
+  font-size: 1.5rem;
+}
+
+nav.mobile ul.dp-button li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  right: 0.02rem;
+  padding: 3rem 1rem 0;
+  background: white;
+}
+
+nav.mobile ul.dp-button li ul.dropdown li{
+  margin-bottom: 1.5rem;
+}
+
+nav.mobile ul.dp-button li:hover ul.dropdown {
+  display: block;
+}
+
+header nav.desktop ul li:last-child{
+  background: black;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.625rem;
+}
+
+header nav.desktop ul li:last-child a{
+  color: white;
+}
+
+.mobile {
+  display: none;
+}
+
+header nav.desktop ul li:hover {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+  header .container {
+    margin: 0.9375rem 0.9375rem;
+  }
+
+  header nav.desktop ul li:last-child{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  header .mobile {
+    display: block;
+  }
+
+  header .desktop {
+    display: none;
+  }
+}
+
+/* hero section  */
+
+section.hero {
+  background: url('../images/nico-meier-3L0AW6IvZfY-unsplash.jpg');
+  height: 650px;
+  background-size: cover;
+  background-position: 100% 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 1;
+}
+
+.hero h1.small {
+  font-weight: 800;
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  margin-bottom: -2rem;
+  
+}
+
+.hero h1.big {
+  font-weight: 700;
+  font-size: 12.5rem;
+  color: #FFB800;
+  font-family: Caveat;
+}
+
+@media only screen and (max-width: 768px) {
+  section.hero {
+    background-position: 100% 70%;
+  }
+
+  .hero h1.small {
+    font-size: 2.5rem;
+  }
+
+  .hero h1.big {
+    font-size: 10rem;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  section.hero {
+    background-position: 100% 100%;
+  }
+
+  h1 {
+    position: relative;
+    top: -3rem;
+  }
+
+  .hero h1.small {
+    font-size: 1.7rem;
+  }
+
+  .hero h1.big {
+    font-size: 8rem;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  section.hero {
+    height: 400px;
+  }
+
+  h1 {
+    position: relative;
+    top: -1rem;
+  }
+
+  .hero h1.small {
+    font-size: 1.7rem;
+  }
+
+  .hero h1.big {
+    font-size: 5rem;
+  }
+}
+
+main {
+  background-color: #FDFDFD;
+  margin: -7rem 5% 0;
+  padding: 3.125rem;
+  border-radius: 0.9375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* about section */
+
+main section {
+  max-width: 67rem;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+section h2{
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+section p {
+  text-align: justify;
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 1024px) {
+  section h2{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  section p {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  section h2{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  section p {
+    font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  section h2{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  section p {
+    font-size: 0.8rem;
+  }
+}
+
+/* perks section */
+
+section.perks p {
+  text-align: center;
+}
+
+.perks .images {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.images .image {
+  width: auto;
+  margin: 1rem;
+}
+
+.image .image-container {
+  max-width: 20rem;
+  max-height: 20rem;
+  overflow: hidden;
+  flex-shrink: 1;
+  margin-bottom: 1rem;
+}
+
+.image-container img {
+  width: 100%;
+  position: relative;
+}
+
+.perks h3 {
+  color: #000;
+  text-align: center;
+  font-family: Caveat;
+  font-size: 2.5rem;
+  line-height: 2rem;
+}
+
+.perks h3 span {
+  color: #FFB800;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+@media only screen and (min-width: 1100px) {
+  .image-container img {
+    width: 100%;
+    position: relative;
+    bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .perks h3 {
+    font-size: 2rem;
+    line-height: 1.5rem;
+  }
+
+  .perks h3 span {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .perks .images {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+section.end {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.newsletter{
+  text-align: left;
+  max-width: 27.3125rem;
+}
+
+.newsletter label {
+  color: #000;
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.newsletter input#email {
+  border-radius: 10px;
+  border: 1px solid #000000;
+  width: 100%;
+  height: 2.5625rem;
+}
+
+.newsletter p {
+  color: #000;
+  font-family: Inter;
+  font-size: 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.newsletter input#button {
+  border-radius: 0.625rem;
+  padding: 0.9375rem 2.5rem;
+  font-size: 1.25rem;
+  background-color: #000000;
+  color: #FFFFFF;
+  border: none;
+}
+
+.joinus {
+  text-align: left;
+  max-width: 18.5rem;
+}
+
+.joinus p {
+  width: 100%;
+  color: #000;
+  text-align: justify;
+  font-family: Inter;
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  flex-shrink: 1;
+}
+
+.joinus input#button {
+  border: none;
+  border-radius: 0.625rem;
+  padding: 0.9375rem 2.5rem;
+  font-size: 1.25rem;
+  background-color: #FFB800;
+  color: #000000;
+}
+
+@media only screen and (max-width: 1100px) {
+  section.end {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter {
+    margin-bottom: 5rem;
+  }
+}
